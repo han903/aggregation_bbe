@@ -6,9 +6,9 @@ Formulation of a FEM updating problem that aims to minimize the largest deviatio
 \begin{align}
     \min_{\mathbf{\alpha}, \mathbf{\lambda}, \mathbf{\psi}, \delta} \quad & \delta \\
     \text{s.t.} \quad 
+    & (\mathbf{K}(\mathbf{\alpha}) - \lambda_i \mathbf{M}) \mathbf{\psi}_i = 0 && \forall i \in [n_{\text{modes}}]\\
     & -\delta \le \frac{\lambda_i^{\text{EXP}} - \lambda_i}{\lambda_i^{\text{EXP}}}\cdot w_{\lambda_i} \le \delta && \forall i \in [n_{\text{modes}}] \\
     & - \delta \le (\mathbf{\psi}_{i}^{\text{EXP},\mathcal{M}} - \mathbf{\psi}_{i}^\mathcal{M})\cdot w_{\mathbf{\psi}_i} \le \delta && \forall i \in [n_{\text{modes}}]\\
-    & - \epsilon \cdot \mathbf{1} \le (\mathbf{K}(\mathbf{\alpha}) - \lambda_i \mathbf{M}) \mathbf{\psi}_i \le \epsilon \cdot \mathbf{1} && \forall i \in [n_{\text{modes}}]\\
     & \mathbf{\alpha}_{lb} \le \mathbf{\alpha} \le \mathbf{\alpha}_{ub} \\
     & \mathbf{\psi}_{lb} \le \mathbf{\psi} \le \mathbf{\psi}_{ub} \\
     & \mathbf{\lambda}_{lb} \le \mathbf{\lambda} \le \mathbf{\lambda}_{ub}.
